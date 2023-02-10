@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+
+<html>
+    <head>
+        <script src="calculadora javascript.js">
+        </script>
+
+        <style>
+           * {
+                background-color: grey;
+                
+            }
+            
+            #num1 {
+                background-color: aliceblue;
+                margin-right: 9.375rem;
+                margin-left: 25rem;
+                margin-top: 3.125rem;
+            }
+
+            #num2 {
+                background-color: aliceblue;
+            }
+
+            .cB {
+              margin-left: 26.5625rem;
+            }
+
+            .s1 {
+                margin-left: 38.125rem;
+                display:inline-block;
+                padding: 0.125rem;
+                border: 2px solid black;
+                border-radius: 0.125rem;
+            }
+
+            .style{
+                background-color: ghostwhite;
+                border-radius: 0.125rem;
+                padding: 0.125rem;
+                
+            }
+            
+            .piscando {
+  animation: piscando 5s ease-in-out infinite;
+}
+
+    @keyframes piscando {
+    0% {
+        opacity: 2;
+        transform: scale(1.2);
+        transform: rotate(5deg);
+    }
+    50% {
+        opacity: 0.2;
+        transform: scale(1);
+        transform: rotate(-5deg);
+    }
+    100% {
+        opacity: 2;
+        transform: scale(1.2);
+        transform: rotate(5deg);
+   }
+}
+
+
+
+        </style>
+
+    </head>
+
+    <body>
+
+       <span class="piscando" style="display: flex; justify-content: center; color: brown;">
+        <p></p><h1>SUPER CALCULADORA DO PETER</h1></p>
+       </span>
+
+        <form>
+            <input type="text" id="num1">
+            <input type="text" id="num2">
+            <br><br><br>
+            <input class="cB style" type="button" value="Adição" onclick="performOperation('adição')">
+            <input class="style" type="button" value="Subtração" onclick="performOperation('subtração')">
+            <input class="style" type="button" value="Multiplicação" onclick="performOperation('multiplicação')">
+            <input class="style" type="button" value="Divisão" onclick="performOperation('divisão')">
+            <input class="style" type="button" value="Potenciação" onclick="performOperation('potenciação')">
+            <input class="style" type="button" value="Raiz" onclick="performOperation('raiz')">
+            <p></p>
+            <span class="s1 style">
+        Resultado: <span class="style" id="result"> </span>
+            </span>
+        </form>
+
+    </body>
+
+</html>
